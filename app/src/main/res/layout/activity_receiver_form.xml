@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Donate"
+        android:text="Organisation"
         android:textSize="20sp"
         android:textAlignment="center"
         android:fontFamily="@font/medium"
@@ -37,7 +37,17 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Donor"
+                android:hint="Organisation"
+                android:id="@+id/organisation"
+                android:textSize="20sp"
+                android:layout_margin="18dp"
+                android:fontFamily="@font/light"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:id="@+id/emailAddress"
                 android:textSize="20sp"
                 android:layout_margin="18dp"
                 android:fontFamily="@font/light"/>
@@ -46,6 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone number"
+                android:id="@+id/contactNumber"
                 android:textSize="20sp"
                 android:layout_margin="18dp"
                 android:fontFamily="@font/light"/>
@@ -53,7 +64,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Details"
+                android:hint="Address"
+                android:id="@+id/Address"
                 android:textSize="20sp"
                 android:layout_margin="18dp"
                 android:fontFamily="@font/light"/>
@@ -61,7 +73,8 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Feed count"
+                android:hint="Number of people in the shelter?"
+                android:id="@+id/numberOfpeople"
                 android:textSize="20sp"
                 android:layout_margin="18dp"
                 android:fontFamily="@font/light"/>
@@ -74,7 +87,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Are you capable of delivering the food?"
+                    android:hint="Are you capable of collecting the food?"
                     android:textSize="20sp"
                     android:layout_margin="18dp"
                     android:fontFamily="@font/light"/>
@@ -86,10 +99,12 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/yes"
                         android:text="Yes"/>
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/no"
                         android:text="No"/>
                 </RadioGroup>
             </LinearLayout>

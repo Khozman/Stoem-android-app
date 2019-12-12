@@ -7,11 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.text.Normalizer;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button supply_button;
+    private Button receive_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +24,23 @@ public class MainActivity extends AppCompatActivity {
                 openForm();
             }
         });
+
+        receive_button = (Button) findViewById(R.id.receiveButton);
+        receive_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReceiverForm();
+            }
+        });
     }
 
     public void openForm(){
-        Intent intent = new Intent(this, Form.class);
+        Intent intent = new Intent(this, SupplyForm.class);
+        startActivity(intent);
+    }
+
+    public void openReceiverForm(){
+        Intent intent= new Intent(this, ReceiverForm.class);
         startActivity(intent);
     }
 }
